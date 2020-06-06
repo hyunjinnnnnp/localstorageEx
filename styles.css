@@ -1,10 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Piedra&display=swap');
+
 body {
   width: 375px;
   height: 560px;
   border: 1px solid red;
   padding: 20px;
+  font-family: 'Piedra', cursive;
+  color: rgb(37, 53, 33);
+  font-size: 20px;
 
-  padding: 20px;
 }
 * {
   box-sizing: border-box;
@@ -49,13 +53,13 @@ label .paper {
   left: 30px;
 }
 .drawRock .loseScissors {
-  transform: rotate(180deg);
+ 
   width: 100px;
   position: absolute;
   top: 250px;
   left: 200px;
+  animation: .5s shaking forwards;
 }
-
 .winGame .winning-msg {
   display: inline-block;
   margin-top: 20px;
@@ -66,6 +70,8 @@ label .paper {
   position: absolute;
   top: 340px;
   left: 200px;
+  
+  animation: .5s shaking forwards;
 }
 /*draw Scissors*/
 .drawScissors .winScissors {
@@ -76,10 +82,48 @@ label .paper {
   transform: rotate(250deg);
   position: absolute;
   top: 230px;
+  animation: .5s shaking forwards; 
 }
 /*draw Paper*/
 
 .winPaper {
   width: 150px;
-  transform: rotate(180deg);
+  transform: rotate(80deg);
+  position: absolute;
+  top:100px;
+  left:50px;
+}
+.loseRock{
+  width: 100px;
+  position: absolute;
+  top: 250px;
+  left:200px;
+  
+  animation: .5s shaking forwards;
+}
+
+/* animation */
+
+@keyframes shaking{
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
+.losing-msg{
+  font-size: 25px;
+  color: rgb(255, 208, 0);
+  
 }

@@ -7,6 +7,7 @@ const MYCHOICE = document.querySelector(".winGame"),
   myPaper = document.querySelector(".drawPaper");
 const REFRESH_BTN = document.querySelector("button");
 
+
 //초기값 다 안보임
 myRock.classList.add("hide");
 myScissors.classList.add("hide");
@@ -33,6 +34,8 @@ function handleSHOWING() {
     document.querySelector(".container input[value = rock]").checked === true
   ) {
     drawPaper();
+    
+    
   } else if (
     document.querySelector(".container input[value = scissors]").checked ===
     true
