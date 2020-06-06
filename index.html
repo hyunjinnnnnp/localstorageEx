@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>what is your choice?</h2>
+    <button onClick="window.location.reload();">Try again!</button>
+    <div class="winGame">
+      <div class="drawRock">
+        <span class="winning-msg">I Win!!</span>
+        <img src="img/rock.png" class="winRock" />
+        <img src="img/scissors.png" class="loseScissors" />
+        <span class="losing-msg">You lose!! sucker~</span>
+      </div>
+      <div class="drawScissors">
+        <span class="winning-msg">I Win!!</span>
+        <img src="img/scissors.png" class="winScissors" />
+        <img src="img/paper.png" class="losePaper" />
+        <span class="losing-msg">You lose!! sucker~</span>
+      </div>
+
+      <div class="drawPaper">
+        <span class="winning-msg">I Win!!</span>
+        <img src="img/paper.png" class="winPaper" />
+        <img src="img/rock.png" class="loseRock" />
+        <span class="losing-msg">You lose!! sucker~</span>
+      </div>
+    </div>
+
+    <form class="container">
+      <input type="radio" name="choice" value="rock" id="rock" />
+      <label for="rock"><img src="img/rock.png" class="rock" /></label>
+
+      <input type="radio" name="choice" value="scissors" id="scissors" />
+      <label for="scissors"
+        ><img src="img/scissors.png" class="scissors"
+      /></label>
+
+      <input type="radio" name="choice" value="paper" id="paper" />
+      <label for="paper"><img src="img/paper.png" class="paper" /></label>
+    </form>
+    <script src="index.js"></script>
+  </body>
+</html>

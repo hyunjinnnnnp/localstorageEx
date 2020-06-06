@@ -1,0 +1,85 @@
+body {
+  width: 375px;
+  height: 560px;
+  border: 1px solid red;
+  padding: 20px;
+
+  padding: 20px;
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+label img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+label .rock {
+  transform: rotate(160deg);
+}
+label .scissors {
+  transform: rotate(300deg);
+}
+label .paper {
+  transform: translateY(10px);
+}
+.hide {
+  display: none;
+}
+.show {
+  display: block;
+}
+
+.container input {
+  display: none;
+}
+
+/* 드로우 */
+.drawRock .winRock {
+  transform: rotate(210deg);
+  width: 150px;
+  position: absolute;
+  top: 100px;
+  left: 30px;
+}
+.drawRock .loseScissors {
+  transform: rotate(180deg);
+  width: 100px;
+  position: absolute;
+  top: 250px;
+  left: 200px;
+}
+
+.winGame .winning-msg {
+  display: inline-block;
+  margin-top: 20px;
+  z-index: 13;
+}
+.winGame .losing-msg {
+  display: inline-block;
+  position: absolute;
+  top: 340px;
+  left: 200px;
+}
+/*draw Scissors*/
+.drawScissors .winScissors {
+  width: 150px;
+}
+.drawScissors .losePaper {
+  width: 100px;
+  transform: rotate(250deg);
+  position: absolute;
+  top: 230px;
+}
+/*draw Paper*/
+
+.winPaper {
+  width: 150px;
+  transform: rotate(180deg);
+}
